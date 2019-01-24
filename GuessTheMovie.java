@@ -41,8 +41,7 @@ outer:
                 if (!(repeated.isEmpty()))
                     System.out.println("\n" + "Please enter a letter");
                 {
-                if (
-                            repeated.contains(s.substring(0))) {
+                if (repeated.contains(s.substring(0))) {
                         System.out.println("Letter is repeated. Please enter another letter.");
                         continue;
                     }
