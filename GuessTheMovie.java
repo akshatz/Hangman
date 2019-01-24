@@ -87,7 +87,6 @@ outer:
                             System.out.println("Out of guesses, GAME OVER!");
                             System.out.println("Correct movie is " + movieName.toUpperCase());
                             repeated.add(s);
-                            //System.out.println(repeated);
                             break;
                         } else {
                             int remain = 10 - count;
@@ -95,7 +94,7 @@ outer:
                             nameGuessed = new String(correctLetters);
                             System.out.println(nameGuessed);
                             repeated.add(s);
-                            //System.out.println(repeated);
+    
                         }
                     }
                 }
