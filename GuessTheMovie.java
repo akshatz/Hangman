@@ -13,8 +13,8 @@ public class GuessTheMovie {
         System.out.println("If a letter is indeed in the title the computer will reveal its correct position in" + " the " + "word.");
 
         File file = new File("movies.txt");
-outer:
-        while (true) {
+//outer:
+  //      while (true) {
             String movieName = null;
             try {
                 movieName = game.getRandomMovie(file);
@@ -41,8 +41,7 @@ outer:
                 if (!(repeated.isEmpty()))
                     System.out.println("\n" + "Please enter a letter");
                 {
-                if (
-                            repeated.contains(s.substring(0))) {
+                if (repeated.contains(s.substring(0))) {
                         System.out.println("Letter is repeated. Please enter another letter.");
                         continue;
                     }
@@ -62,7 +61,6 @@ outer:
                         System.out.println("Please enter only letter");
                     }
                     int x = 0;
-
                     if (i >= 0) {
                         for (x = 0; x < movieLetters.length; x++) {
                             if (movieLetters[x] == ch) {
@@ -75,7 +73,6 @@ outer:
 
                         System.out.println(nameGuessed);
                         System.out.println("");
-
                         if (game.checkWon(correctLetters)) {
                             System.out.println("Well Done!!You have correctly identified movie name!");
                             repeated.add(s);
@@ -99,7 +96,7 @@ outer:
                     }
                 }
             }
-            System.out.println("Would you like to continue ? Y/N");
+          /*  System.out.println("Would you like to continue ? Y/N");
             y = scanner.nextLine();
             y = y.toLowerCase();
             System.out.println(y);
@@ -110,6 +107,6 @@ outer:
                 break;
             }
 
-        }
+        }*/
     }
 }
