@@ -11,7 +11,7 @@ public class GuessTheMovie {
         System.out.println("The rules are simple, the computer randomly picks a movie title, and shows you how " + "many " + "letters it's made up of.");
         System.out.println("Your goal is to try to figure out the movie by guessing one letter at a time.");
         System.out.println("If a letter is indeed in the title the computer will reveal its correct position in" + " the " + "word.");
-        File file = new File("C:\\Users\\User2\\Desktop\\ud282-master\\GuesstheMovie\\src\\com\\movies.txt");
+        File file = new File("movies.txt");
 outer:
         while (true) {
             String movieName = null;
