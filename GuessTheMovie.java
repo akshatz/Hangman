@@ -1,8 +1,8 @@
+package com;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class GuessTheMovie {
 
     public static void main(String[] args) {
@@ -11,8 +11,7 @@ public class GuessTheMovie {
         System.out.println("The rules are simple, the computer randomly picks a movie title, and shows you how " + "many " + "letters it's made up of.");
         System.out.println("Your goal is to try to figure out the movie by guessing one letter at a time.");
         System.out.println("If a letter is indeed in the title the computer will reveal its correct position in" + " the " + "word.");
-
-        File file = new File("movies.txt");
+        File file = new File("C:\\Users\\User2\\Desktop\\ud282-master\\GuesstheMovie\\src\\com\\movies.txt");
 outer:
         while (true) {
             String movieName = null;
@@ -41,14 +40,12 @@ outer:
                 if (!(repeated.isEmpty()))
                     System.out.println("\n" + "Please enter a letter");
                 {
-                if (repeated.contains(s.substring(0))) {
+                    if (repeated.contains(s.substring(0))) {
                         System.out.println("Letter is repeated. Please enter another letter.");
                         continue;
                     }
-
                 }
                 String nameGuessed = null;
-
                 if (!s.matches("[A-Za-z]")) {
                     System.out.println("Please enter single letter only ");
                 } else {
@@ -61,7 +58,6 @@ outer:
                         System.out.println("Please enter only letter");
                     }
                     int x = 0;
-
                     if (i >= 0) {
                         for (x = 0; x < movieLetters.length; x++) {
                             if (movieLetters[x] == ch) {
@@ -71,10 +67,8 @@ outer:
                         }
                         nameGuessed = new String(correctLetters);
                         System.out.println("");
-
                         System.out.println(nameGuessed);
                         System.out.println("");
-
                         if (game.checkWon(correctLetters)) {
                             System.out.println("Well Done!!You have correctly identified movie name!");
                             repeated.add(s);
@@ -86,14 +80,13 @@ outer:
                             System.out.println("Out of guesses, GAME OVER!");
                             System.out.println("Correct movie is " + movieName.toUpperCase());
                             repeated.add(s);
-                            break;
+                            continue;
                         } else {
                             int remain = 10 - count;
                             System.out.println("WRONG! You have guessed " + count + " wrong letters!  try again. You have " + remain + " guesses left");
                             nameGuessed = new String(correctLetters);
                             System.out.println(nameGuessed);
                             repeated.add(s);
-    
                         }
                     }
                 }
@@ -108,7 +101,6 @@ outer:
                 System.out.println("Thanks for playing");
                 break;
             }
-
         }
     }
 }
