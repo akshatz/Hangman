@@ -8,7 +8,7 @@ public class GuessTheMovie {
 
     public static void main(String[] args) throws FileNotFoundException{
         Game game = new Game();
-        File file = new File("C:\\Users\\User2\\Desktop\\ud282-master\\GuesstheMovie\\src\\com\\movies.txt");
+        File file = new File("movies.txt");
         if(!file.exists()){
             System.err.println("ERROR! file containing movielist is missing. Please input appropriate file and rerun.");
             System.exit(0);
