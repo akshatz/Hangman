@@ -1,4 +1,3 @@
-package com;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ public class GuessTheMovie {
             System.exit(0);
         }
         System.out.println("Welcome to Guess the Movie!");
-        System.out.println("The rules are simple, the computer randomly picks a movie title, and shows you how " + "many " + "characters it's made up of. Please enter special charcterd like numbers,"+"!,"+"',"+" | "+" if you feel.");
+        System.out.println("The rules are simple, the computer randomly picks a movie title, and shows you how " + "many " + "characters it's made up of. Please enter special characters like numbers,"+"!,"+"',"+" | "+" if you feel.");
         System.out.println("Your goal is to try to figure out the movie by guessing one letter at a time.");
         System.out.println("If a character is indeed in the title the computer will reveal its correct position in" + " the " + "word.");
 
